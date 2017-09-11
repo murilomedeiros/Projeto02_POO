@@ -1,6 +1,6 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<nav id="navbarP" class="navbar navbar-inverse navbar-static-top normal" role="navigation" style="margin-bottom: 100px">
+<nav id="navbarP" class="navbar navbar-inverse navbar-fixed-top normal" role="navigation" style="margin-bottom: 100px">
 
     <div class="container">
         <div class="navbar-header">
@@ -12,13 +12,27 @@
             </button>
             <a class="navbar-brand" href="#"><img class="img-responsive" src="res/images/LogoTransp.png" alt=""></a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse txtCenter whiteC">
-            <h2>teste</h2>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="home" class="active"><a  id="ahome" href="#">Home</a></li>
+                <li id="about" class=""><a id="aabout" href="#sobre">Sobre</a></li>
+                <li id="team" class=""><a id="ateam" href="#equipe">Equipe</a></li>
+            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>
     <!--/.contatiner -->
 </nav>
 <script>
+    window.onscroll = function () {
+        myFunction();
+    };
+    function myFunction() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            document.getElementById("navbarP").classList.add("encolher");
+        } else {
+            document.getElementById("navbarP").classList.remove("encolher");
+        }
+    }
 
 </script>
