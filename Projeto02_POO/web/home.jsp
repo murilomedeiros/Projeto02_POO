@@ -10,8 +10,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <!-- Bootstrap -->
+        <link href='res/styles/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+        <link href='res/styles/style.css' rel='stylesheet' type='text/css'/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
+        <%@include file="WEB-INF/jspf/header.jspf" %>
+        
+        <%@include file="WEB-INF/jspf/navBar.jspf" %>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+        <script src='res/scripts/jquery-3.2.1.min.js' type='text/javascript'></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src='res/scripts/bootstrap.min.js' type='text/javascript'></script>
     </body>
 </html>
+
