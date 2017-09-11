@@ -1,0 +1,184 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/09/2017, 19:32:54
+    Author     : murilo
+*/
+
+/* ======================  Layout  ======================*/
+html, body, .cover{
+    height: 100%
+}
+
+body{
+    font-family: Helvetica,Arial,sans-serif; 
+    min-height: 2000px;
+}
+
+.whiteC{
+    color: white;
+}
+
+.blackCH{
+    color: black;
+}
+
+.blackCH tbody tr:hover{
+    background-color: rgb(69, 181,248); 
+}
+
+.textCenter{
+    text-align: center;
+
+}
+
+/* ---  Navbar ---*/
+/* added to  .nav */
+.normal {
+ height: 75px; /* this causes drop down to lose color ??? */
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+transition: 0.5s;
+}
+
+.normal .navbar-right {
+padding-top: 12px;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+transition: 0.5s;
+}
+.navbar-brand {
+padding: 0px !important;
+}
+.navbar-brand img {
+padding: 5px;
+max-height: 75px;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+transition: 0.5s;
+}
+.encolher {
+height: 50px;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+transition: 0.5s;
+}
+.encolher .navbar-right {
+padding-top: 0px;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+transition: 0.5s;
+}
+.encolher .navbar-brand img {
+max-height: 50px;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+transition: 0.5s;
+}
+
+.marginTop{
+    margin-top: 75px;
+
+}
+#navbarP2{
+  background-color: rgb(69, 165, 100);
+  
+}
+
+.sizeNB2{
+    height: 50px;
+}
+
+.txtCenter{
+    text-align: center;
+}
+
+
+/* ---  Capa ---*/
+/* --- Botao capa ---*/
+
+/* --- Conteudo Team --*/
+
+/* --- Footer --*/
+footer{
+    background: #000;
+    padding: 20px 0px 20px 0px;
+    margin-bottom: 0px;
+    max-height: 100px;
+    position: static;
+}
+
+.footer-bottom {
+    color: white;
+    background-color: black ; 
+    margin-top: -20px;
+    margin-bottom: -10px;
+    font-size: 13px;
+    padding-top: 0px;
+    padding-bottom: 1px;
+
+}
+
+#footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#footer li {
+    float: left;
+}
+
+#footer a{
+    color: white;
+}
+
+#footer a:hover{
+    color: Gray;
+    background: none;
+}
+#footer a:hover{
+    background-color: black;
+}
+#black{
+    background-color: black;
+    padding-top: 15px;
+    min-height: 100px;
+    padding-left:5%;
+    padding-right: 5%;
+}
+
+
+
+
+/* ======================  Formatcao de texto  ======================*/
+
+h1{
+    font-size: 550%;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 150%;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+#footer h4 {
+    color: #919496;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
