@@ -5,13 +5,18 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Classes.Price"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <%
+            Price gg = new Price(); 
+            
+        %>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1><%out.print(gg.batata());%></h1>
     </body>
 </html>
