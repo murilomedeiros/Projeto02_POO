@@ -200,6 +200,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="res/scripts/bootstrap.min.js" type="text/javascript"></script>
         <script>
+            
             var $doc = $("html, body");
             $("#ateam").click(function () {
                 $doc.animate({
@@ -208,6 +209,7 @@
                 document.getElementById("home").classList.remove("active");
                 document.getElementById("about").classList.remove("active");
                 document.getElementById("team").classList.add("active");
+                
                 return false;
             });
             $("#ahome").click(function () {
@@ -227,6 +229,12 @@
                 document.getElementById("about").classList.add("active");
                 document.getElementById("team").classList.remove("active");
                 return false;
+
+            });
+            $("#adrop1").click(function () {
+                document.getElementById("home").classList.remove("active");
+                document.getElementById("about").classList.remove("active");
+                document.getElementById("team").classList.remove("active");
 
             });
         </script>

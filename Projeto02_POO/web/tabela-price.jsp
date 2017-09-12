@@ -12,6 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tabela Price</title>
+        <link rel="icon" href="res/images/LogoTransp.png">
         <!-- Bootstrap -->
         <link href="res/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="res/styles/style.css" rel="stylesheet" type="text/css"/>
@@ -35,8 +36,10 @@
             }
     %>
     
-    <body class="container-fluid">
-        <h1 class="container-fluid" style="width: 900px;">Tabela Price</h1>
+    <body>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
+        <div style="border: 1px solid red;margin-top: 90px">
+        <h1 class="container-fluid" style="width: 900px; ">Tabela Price</h1>
         </hr>
         <form class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1); padding: 25px;border: 1px solid grey; border-radius: 5px;">
             
@@ -75,7 +78,7 @@
             
         <%out.print(gg.createTable(pv, n, i));
         }%>
-        
-        
+        </div>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

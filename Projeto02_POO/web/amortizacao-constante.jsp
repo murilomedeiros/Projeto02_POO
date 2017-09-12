@@ -9,9 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Tabela Price</title>
+        <link rel="icon" href="res/images/LogoTransp.png">
+        <!-- Bootstrap -->
+        <link href="res/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="res/styles/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
+        <h1>Hello World!Constante</h1>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
