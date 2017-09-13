@@ -1,7 +1,7 @@
 <%-- 
     Document   : amortizacao-amaricana
     Created on : 11/09/2017, 00:23:33
-    Author     : rodri
+    Author     : Rodrigo Figueiredo
 --%>
 
 <%@page import="java.text.DecimalFormat"%>
@@ -38,47 +38,45 @@
 
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <div style="margin-top: 130px; margin-bottom: 90px; height: 100%;">
-            <div class="format_area">
-                <h1 class="container-fluid text-center">Amortização americana</h1><hr class="bottom-line4"><br><br>
-                <form class="container-fluid format_tabela format_form">
+        <div class="format_area">
+            <h1 class="container-fluid text-center">Amortização Americana</h1><hr class="bottom-line4"><br><br>
+            <form class="container-fluid format_tabela format_form">
 
-                    <div class="form-group form-horizontal">
-                        <label class="col-sm-4 control-label" for="pv">Valor</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">R$</div>
-                            <input class="form-control" type="number" name="pv" value=""  step="any"/>
-                        </div>
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-4 control-label" for="pv">Valor</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">R$</div>
+                        <input class="form-control" type="number" name="pv" value=""  step="any"/>
                     </div>
+                </div>
 
-                    <div class="form-group form-horizontal">
-                        <label class="col-sm-4 control-label" for="n">Número de prestações</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                            <input class="form-control" type="number" name="n" value="" />
-                        </div>      
-                    </div>
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-4 control-label" for="n">Número de prestações</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <input class="form-control" type="number" name="n" value="" />
+                    </div>      
+                </div>
 
-                    <div class="form-group form-horizontal">
-                        <label class="col-sm-4 control-label" for="i">Taxa de Juros (% ao mês)</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">&nbsp;%</div>
-                            <input class="form-control" type="number" name="i" value=""  step="any"/>
-                        </div>
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-4 control-label" for="i">Taxa de Juros (% ao mês)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">&nbsp;%</div>
+                        <input class="form-control" type="number" name="i" value=""  step="any"/>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-offset-4">
-                            <input class="btn btn-default" type="submit"  name="btnCalc" value="Calcular"/>
-                        </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-4">
+                        <input class="btn btn-default" type="submit"  name="btnCalc" value="Calcular"/>
                     </div>
-                </form>
-                <% if (request.getParameter("btnCalc") != null) { %>
+                </div>
+            </form>
+            <% if (request.getParameter("btnCalc") != null) { %>
                 <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");
-                    out.print("Valor da Prestação R$ " + dv.format(gg.CalcPrestAmeric(pv, n, i)));%></div>
-                    <%out.print(gg.createTable(pv, n, i, gg.CalcPrestAmeric(pv, n, i), "americ"));
-                    }%>
-            </div>
+                out.print("Valor da Prestação R$ " + dv.format(gg.CalcPrestAmeric(pv, i)));%></div>
+                <%out.print(gg.createTable(pv, n, i, gg.CalcPrestAmeric(pv, i), "americ"));
+            }%>
         </div>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
         <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->

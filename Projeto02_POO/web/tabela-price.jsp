@@ -1,7 +1,7 @@
 <%-- 
     Document   : tabela-price
     Created on : 11/09/2017, 00:23:33
-    Author     : rodri
+    Author     : Rodrigo Corneta
 --%>
 
 <%@page import="java.text.DecimalFormat"%>
@@ -38,8 +38,8 @@
 
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <div style="margin-top: 130px; height: 110%;">
-            <h1 class="container-fluid text-center" style="width: 900px; ">Tabela Price</h1><hr class="bottom-line4"><br><br>
+        <div class="format_area">
+            <h1 class="container-fluid text-center">Tabela Price</h1><hr class="bottom-line4"><br><br>
 
             <form class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1); padding: 25px;border: 1px solid grey; border-radius: 5px;">
 
@@ -77,12 +77,9 @@
                 <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");
                 out.print("Valor da Prestação R$ " + dv.format(gg.CalcPrestPrice(pv, n, i)));%></div>
                 <%out.print(gg.createTable(pv, n, i, gg.CalcPrestPrice(pv, n, i), "price"));
-                    }%>
-                    <div style="width: 100%;  position: relative;  margin-top: 30px;">
-                    <%@include file="WEB-INF/jspf/footer.jspf" %>
-                    </div>
+            }%>
         </div>
-        
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
         <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="res/scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
