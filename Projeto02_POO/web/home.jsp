@@ -106,7 +106,7 @@
                             <div class="team-hover">
                                 <div class="desk">
                                     <h4>Back-end</h4><br><br>
-                                    <p>Foi responsável pela lógica da.</p>
+                                    <p>Foi responsável pela lógica da Amortização Constante.</p>
                                 </div>
                                 <div class="s-link">
                                     <a href="https://www.facebook.com/murilo.meedeiros" target="_blank"><img class="icons" src="res/images/facebook.png" alt=""/></a>
@@ -152,7 +152,7 @@
                             <div class="team-hover">
                                 <div class="desk">
                                     <h4>Back-end</h4><br><br>
-                                    <p>Foi responsável pela lógica da.</p>
+                                    <p>Foi responsável pela lógica da Amortização Americana.</p>
                                 </div>
                                 <div class="s-link">
                                     <a href="https://www.facebook.com/murilo.meedeiros" target="_blank"><img class="icons" src="res/images/facebook.png" alt=""/></a>
