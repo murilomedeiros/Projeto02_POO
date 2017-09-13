@@ -20,8 +20,13 @@ public class Amortizacao {
         
         return pmt;
     }
-    public Double CalcPrestAmeric(double pv, double n, double i){
+    public Double CalcPrestAmeric(double pv, double i){
         pmt = pv * (i/100);
+        
+        return pmt;
+    }
+    public Double CalcPrestConst(double pv, double n){
+        pmt = pv / n;
         
         return pmt;
     }
@@ -44,25 +49,34 @@ public class Amortizacao {
                 + "<tr>"
                 + "<tr>"
                 + "<td>"+0+"</td>"
-                + "<td>"+0+"</td>"
+                + "<td>"+df.format(0)+"</td>"
                 + "<td>"+df.format(juros)+"</td>"
                 + "<td>"+df.format(amortizacao)+"</td>"
                 + "<td>"+df.format(saldo)+"</td>"
                 + "</tr>";
+        if (a=="const")
+            amortizacao = pmt;
         for(int j = 1; j <= n; j++)
         {
             if (a=="americ" && j==n)
                 pmt = saldo + pmt;
             
-            prestacaoSoma = prestacaoSoma + pmt;
             juros = (saldo*(i/100));
+            
+            if (a=="const")
+                pmt = amortizacao+juros;
+            
+            prestacaoSoma = prestacaoSoma + pmt;
             jurosSoma = jurosSoma + juros;
             if (a=="americ" && j==n)
                 amortizacao=saldo;
-            else
+            else if (a=="price")
                 amortizacao = pmt - juros;
             amortizacaoSoma = amortizacaoSoma + amortizacao;
             saldo = saldo - amortizacao;
+            
+            if (saldo<0)
+                saldo=0;
             table = table + "<tr>"
                     + "<td>"+j+"</td>"
                     + "<td>"+df.format(pmt)+"</td>"
