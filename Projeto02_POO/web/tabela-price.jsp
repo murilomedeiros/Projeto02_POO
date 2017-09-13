@@ -19,29 +19,29 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
-    
+
     <%
-            Amortizacao gg = new Amortizacao();
-            double pv = 0;
-            double i = 0;
-            double n = 0;
-            try{
-                pv = Double.parseDouble(request.getParameter("pv"));
-                i = Double.parseDouble(request.getParameter("i"));
-                n = Double.parseDouble(request.getParameter("n"));
-            }catch(Exception ex){
-                
-            }
+        Amortizacao gg = new Amortizacao();
+        double pv = 0;
+        double i = 0;
+        double n = 0;
+        try {
+            pv = Double.parseDouble(request.getParameter("pv"));
+            i = Double.parseDouble(request.getParameter("i"));
+            n = Double.parseDouble(request.getParameter("n"));
+        } catch (Exception ex) {
+
+        }
     %>
-    
+
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <div class="format_area">
-            <h1 class="container-fluid text-center">Tabela Price</h1><br><br>
-            </hr>
-            <form class="container-fluid format_tabela format_form">
+        <div style="margin-top: 130px; height: 110%;">
+            <h1 class="container-fluid text-center" style="width: 900px; ">Tabela Price</h1><hr class="bottom-line4"><br><br>
+
+            <form class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1); padding: 25px;border: 1px solid grey; border-radius: 5px;">
 
                 <div class="form-group form-horizontal">
                     <label class="col-sm-4 control-label" for="pv">Valor</label>
@@ -55,7 +55,7 @@
                     <label class="col-sm-4 control-label" for="n">Número de prestações</label>
                     <div class="input-group">
                         <div class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                            <input class="form-control" type="number" name="n" value="" />
+                        <input class="form-control" type="number" name="n" value="" />
                     </div>      
                 </div>
 
@@ -63,7 +63,7 @@
                     <label class="col-sm-4 control-label" for="i">Taxa de Juros (% ao mês)</label>
                     <div class="input-group">
                         <div class="input-group-addon">&nbsp;%</div>
-                    <input class="form-control" type="number" name="i" value=""  step="any"/>
+                        <input class="form-control" type="number" name="i" value=""  step="any"/>
                     </div>
                 </div>
 
@@ -73,12 +73,16 @@
                     </div>
                 </div>
             </form>
-            <% if(request.getParameter("btnCalc")!= null){ %>
-                <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");out.print("Valor da Prestação R$ "+ dv.format(gg.CalcPrestPrice(pv, n, i)));%></div>
+            <% if (request.getParameter("btnCalc") != null) { %>
+                <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");
+                out.print("Valor da Prestação R$ " + dv.format(gg.CalcPrestPrice(pv, n, i)));%></div>
                 <%out.print(gg.createTable(pv, n, i, gg.CalcPrestPrice(pv, n, i), "price"));
-            }%>
+                    }%>
+                    <div style="width: 100%;  position: relative;  margin-top: 30px;">
+                    <%@include file="WEB-INF/jspf/footer.jspf" %>
+                    </div>
         </div>
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
+        
         <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="res/scripts/jquery-3.2.1.min.js" type="text/javascript"></script>

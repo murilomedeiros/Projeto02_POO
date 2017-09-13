@@ -348,7 +348,7 @@ h3{
     color: #919496;
     font-size: 12px;
     text-transform: uppercase;
-    
+
 }
 .text-cover{
     text-align: center;
@@ -368,8 +368,8 @@ h3{
 }
 
 .rodape_esp{
-     padding-left:5%;
-     padding-right: 5%;
+    padding-left:5%;
+    padding-right: 5%;
 }
 
 /* ======================  Tabela  ======================*/
@@ -385,13 +385,26 @@ h3{
 }
 
 .format_tabela{
+    position: relative;
     width: 800px; 
     background-color: rgba(9,9,9,0.1);
     font-size: 16px; 
     padding: 10px; 
     margin-top:30px;
-    margin-bottom: 10px;
     border: 1px solid grey; 
     border-radius: 5px;
     font-weight: bold;
+}
+
+
+#overlay {
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
 }

@@ -23,18 +23,21 @@
 
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <section id="up">
-            <div class="container" style="width: 100%; padding: 0px;margin-top: 60px; height: 700px; background: rgb(130, 130, 130); ">
-                <div class='container cover' style="padding: 100px 0px 20px 0px; ">
-                    <div class='row'>
-                        <div class='col-md-12' >
-                            <div class='text-cover'>
-                                <h1 id='' class="whiteC w3-container w3-center w3-animate-top" style="text-align: center">Calculadora de Amortização</h1><br>
-                                <h3 class="w3-animate-bottom">Essa aplicação WEB tem como finalidade calcular a amortização de um empréstimo utilizando Tabela Price, Amortização Constante e Amortização Americana.</h3>
+            <div class="container" style="width: 100%; padding: 0px;margin-top: 60px; height: 700px; background: url(res/images/backgroundP.jpg); background-size: cover;background-repeat: no-repeat;">
+                <div id="overlay">
+                    <div class='container cover' style="padding: 100px 0px 20px 0px; ">
+                        <div class='row'>
+                            <div class='col-md-12' >
+                                <div class='text-cover'>
+                                    <h1 id='' class="whiteC w3-container w3-center w3-animate-top" style="text-align: center">Calculadora de Amortização</h1><br>
+                                    <h3 class="w3-animate-bottom">Essa aplicação WEB tem como finalidade calcular a amortização de um empréstimo utilizando Tabela Price, Amortização Constante e Amortização Americana.</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div></section>
+            </div>
+        </section>
         <section id="sobre">
             <div class="container-fluid" style="padding: 8% 20%; ">
                 <div class="heading-title text-center" >
@@ -216,4 +219,3 @@
         </script>
     </body>
 </html>
-
