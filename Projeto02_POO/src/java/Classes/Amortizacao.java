@@ -5,24 +5,27 @@
  */
 package Classes;
 
-import static java.lang.System.out;
 import java.text.DecimalFormat;
 
 /**
  *
  * @author rodri
  */
-public class Price {
-    public Double ResultPrestacao(double pv, double n, double i){
-        
-        double pmt = 0;
+public class Amortizacao {
+    double pmt = 0;
+    public Double CalcPrestPrice(double pv, double n, double i){
         double d1 = Math.pow((1+(i/100)),n);
         
         pmt = pv / ((d1-1) / (d1*(i/100)) );
         
         return pmt;
     }
-    public String createTable(double pv, double n, double i){
+    public Double CalcPrestAmeric(double pv, double n, double i){
+        pmt = pv * (i/100);
+        
+        return pmt;
+    }
+    public String createTable(double pv, double n, double i, double pmt, String a){
         DecimalFormat df = new DecimalFormat("#,##0.00");
         double juros = 0;
         double amortizacao = 0;
@@ -32,7 +35,6 @@ public class Price {
         double jurosSoma = 0;
         double amortizacaoSoma = 0;
         double prestacaoSoma = 0;
-        double pmt = ResultPrestacao(pv, n, i);
         String table = "<table class='table table-bordered container-fluid' style='width: 800px;'><tr>"
                 + "<th>Nº</th>"
                 + "<th>Prestação</th>"
@@ -49,10 +51,16 @@ public class Price {
                 + "</tr>";
         for(int j = 1; j <= n; j++)
         {
+            if (a=="americ" && j==n)
+                pmt = saldo + pmt;
+            
             prestacaoSoma = prestacaoSoma + pmt;
             juros = (saldo*(i/100));
             jurosSoma = jurosSoma + juros;
-            amortizacao = pmt - juros;
+            if (a=="americ" && j==n)
+                amortizacao=saldo;
+            else
+                amortizacao = pmt - juros;
             amortizacaoSoma = amortizacaoSoma + amortizacao;
             saldo = saldo - amortizacao;
             table = table + "<tr>"

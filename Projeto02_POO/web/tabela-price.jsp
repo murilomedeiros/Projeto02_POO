@@ -6,7 +6,7 @@
 
 <%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="Classes.Price"%>
+<%@page import="Classes.Amortizacao"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +23,7 @@
     </head>
     
     <%
-            Price gg = new Price();
+            Amortizacao gg = new Amortizacao();
             double pv = 0;
             double i = 0;
             double n = 0;
@@ -38,46 +38,45 @@
     
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <div style="margin-top: 130px; margin-bottom: 90px; height: 110%;">
-            <h1 class="container-fluid text-center" style="width: 900px; ">Tabela Price</h1><br><br>
-        </hr>
-        <form class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1); padding: 25px;border: 1px solid grey; border-radius: 5px;">
-            
-            <div class="form-group form-horizontal">
-                <label class="col-sm-4 control-label" for="pv">Valor</label>
-                <div class="input-group">
-                    <div class="input-group-addon">R$</div>
-                    <input class="form-control" type="number" name="pv" value=""  step="any"/>
+        <div class="format_area">
+            <h1 class="container-fluid text-center">Tabela Price</h1><br><br>
+            </hr>
+            <form class="container-fluid format_tabela format_form">
+
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-4 control-label" for="pv">Valor</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">R$</div>
+                        <input class="form-control" type="number" name="pv" value=""  step="any"/>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="form-group form-horizontal">
-                <label class="col-sm-4 control-label" for="n">Número de prestações</label>
-                <div class="input-group">
-                    <div class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                        <input class="form-control" type="number" name="n" value="" />
-                </div>      
-            </div>
-                
-            <div class="form-group form-horizontal">
-                <label class="col-sm-4 control-label" for="i">Taxa de Juros (% ao mês)</label>
-                <div class="input-group">
-                    <div class="input-group-addon">&nbsp;%</div>
-                <input class="form-control" type="number" name="i" value=""  step="any"/>
+
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-4 control-label" for="n">Número de prestações</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <input class="form-control" type="number" name="n" value="" />
+                    </div>      
                 </div>
-            </div>
-            
-            <div class="form-group">
-                <div class="col-sm-offset-4">
-                    <input class="btn btn-default" type="submit"  name="btnCalc" value="Calcular"/>
+
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-4 control-label" for="i">Taxa de Juros (% ao mês)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">&nbsp;%</div>
+                    <input class="form-control" type="number" name="i" value=""  step="any"/>
+                    </div>
                 </div>
-            </div>
-        </form>
-        <% if(request.getParameter("btnCalc")!= null){ %>
-        <div class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1);font-size: 16px; padding: 10px; margin-top:30px;margin-bottom: 10px;border: 1px solid grey; border-radius: 5px;"><% DecimalFormat dv = new DecimalFormat("#,##0.00");out.print("Valor da Prestação R$ "+ dv.format(gg.ResultPrestacao(pv, n, i)));%></div>
-            
-        <%out.print(gg.createTable(pv, n, i));
-        }%>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-4">
+                        <input class="btn btn-default" type="submit"  name="btnCalc" value="Calcular"/>
+                    </div>
+                </div>
+            </form>
+            <% if(request.getParameter("btnCalc")!= null){ %>
+                <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");out.print("Valor da Prestação R$ "+ dv.format(gg.CalcPrestPrice(pv, n, i)));%></div>
+                <%out.print(gg.createTable(pv, n, i, gg.CalcPrestPrice(pv, n, i), "price"));
+            }%>
         </div>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
         <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->

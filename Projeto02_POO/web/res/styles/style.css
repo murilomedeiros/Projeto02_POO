@@ -367,9 +367,31 @@ h3{
     font-weight: 600;
 }
 
+.rodape_esp{
+     padding-left:5%;
+     padding-right: 5%;
+}
 
-/* ======================  Efeitos  ======================*/
+/* ======================  Tabela  ======================*/
 
+.format_area{
+    margin-top: 130px; 
+    smargin-bottom: 90px;
+    min-height: 600px;
+}
 
+.format_form{
+    padding: 25px;
+}
 
-
+.format_tabela{
+    width: 800px; 
+    background-color: rgba(9,9,9,0.1);
+    font-size: 16px; 
+    padding: 10px; 
+    margin-top:30px;
+    margin-bottom: 10px;
+    border: 1px solid grey; 
+    border-radius: 5px;
+    font-weight: bold;
+}

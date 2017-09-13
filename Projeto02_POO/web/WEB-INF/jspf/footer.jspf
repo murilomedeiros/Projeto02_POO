@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <div class='container-fluid' id='footer'>
     <div class='row' >
-        <div class='col-md-12' id='black' style=' padding-left:5%; padding-right: 5%;'>
+        <div class='col-md-12' id='black' class='rodape_esp'>
             <div class='row' >
                 <div class='col-md-4'>
                     <img style='width: 40px; height: 40px' src='res/images/LogoTransp.png' alt=''/>
