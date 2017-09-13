@@ -9,12 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Calculadora Monetária</title>
+        <title>Calculadora de Amortização</title>
         <link rel="icon" href="res/images/LogoTransp.png">
         <!-- Bootstrap -->
         <link href="res/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="res/styles/style.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -22,78 +23,53 @@
 
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <section id="up">
-            <div class="container" style="width: 100%; padding: 0px;margin-top: 60px ">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" style="height: 600px; ">
-                        <div class="item active">
-                            <img src="res/images/background-cal.jpg" alt="Los Angeles" style="width:100%;">
-                        </div>
-                        <div class="item">
-                            <img src="res/images/background-cal.jpg" alt="Los Angeles" style="width:100%;">
-                        </div>
-
-                        <div class="item">
-                            <img src="res/images/background-cal.jpg" alt="Chicago" style="width:100%;">
-                        </div>
-
-                        <div class="item">
-                            <img src="res/images/background-cal.jpg" alt="New york" style="width:100%;">
+            <div class="container" style="width: 100%; padding: 0px;margin-top: 60px; height: 700px; background: rgb(130, 130, 130); ">
+                <div class='container cover' style="padding: 100px 0px 20px 0px; ">
+                    <div class='row'>
+                        <div class='col-md-12' >
+                            <div class='text-cover'>
+                                <h1 id='' class="whiteC w3-container w3-center w3-animate-top" style="text-align: center">Calculadora de Amortização</h1><br>
+                                <h3 class="w3-animate-bottom">Essa aplicação WEB tem como finalidade calcular a amortização de um empréstimo utilizando Tabela Price, Amortização Constante e Amortização Americana.</h3>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div></section>
         <section id="sobre">
-            <div class="container-fluid" style="padding: 8% 25%;">
-
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
-                aaaaaaaaaaaaaaaaa<br>
+            <div class="container-fluid" style="padding: 8% 20%; ">
+                <div class="heading-title text-center" >
+                    <h1 class="text-uppercase" >Sistemas de amortização</h1>
+                    <hr class="bottom-line3">
+                </div><br><br><br>
+                <div class="w3-card-4" style="height: 220px; padding: 20px">
+                    <div style="padding: 2px">
+                        <a href="tabela-price.jsp"><img style="width: 150px; height: 150px;" src="res/images/desenho.png" alt=""/></a>
+                        <h2 style="margin: -120px 0px 0px 200px;">Tabela Price:</h2><br>
+                        <p style="margin: 0px 0px 0px 220px; font-size: 15px; padding-bottom: 10px;">A Tabela Price foi desenvolvida para ser uma solução no cálculo de pensões e aposentadoria, porém, com o passar do tempo se tornou um sistema de amortização muito utilizado pelos financiamentos em geral. </p>
+                    </div>
+                </div>
+                <div class="w3-card-4" style="margin-top: 150px; height: 220px;">
+                    <div style="padding: 2px">
+                        <a href="amortizacao-americana.jsp"><img  style="width: 150px; height: 150px; margin-right: 20px; margin-top: 20px;" src="res/images/desenho2.png" align="right" alt=""/></a>
+                        <h2 style="margin-left: 20px; padding-top: 25px; padding-bottom: 0px;">Amortização Americana:</h2>
+                        <p style="margin-left:  50px; font-size: 15px; width: 800px; padding-top: 15px;">O Sistema de Amortização Americano é uma forma de pagamento de empréstimos que se caracteriza pelo pagamento apenas dos juros da dívida,deixando o valor da dívida constante, que pode ser paga em apenas um único pagamento.</p>
+                    </div>
+                </div>
+                <div class="w3-card-4" style="margin-top: 150px; height: 220px; padding: 20px">
+                    <div style="padding: 2px">
+                        <a href="amortizacao-constante.jsp"><img style="width: 150px; height: 150px;"  src="res/images/desenho3.png" alt=""/></a>
+                        <h2 style="margin: -120px 0px 0px 200px;">Amortização Constante:</h2><br>
+                        <p style="margin: 0px 0px 0px 220px; font-size: 15px;">Sistema de Amortização Constante (SAC) é uma forma de amortização de um empréstimo por prestações que incluem os juros, amortizando assim partes iguais do valor total do empréstimo.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="equipe">
             <div class="container"> 
                 <div class="row">
                     <div class="heading-title text-center" >
-                        <h3 class="text-uppercase">Equipe</h3>
-                        <hr class="bottom-line3">
+                        <h3 class="text-uppercase" style="font-size: 35px;">Equipe</h3>
+                        <hr class="bottom-line4">
                     </div>
 
                     <div class="col-md-4 col-sm-4 col-md-offset-1">
@@ -200,7 +176,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="res/scripts/bootstrap.min.js" type="text/javascript"></script>
         <script>
-            
+
             var $doc = $("html, body");
             $("#ateam").click(function () {
                 $doc.animate({
@@ -209,7 +185,7 @@
                 document.getElementById("home").classList.remove("active");
                 document.getElementById("about").classList.remove("active");
                 document.getElementById("team").classList.add("active");
-                
+
                 return false;
             });
             $("#ahome").click(function () {

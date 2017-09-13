@@ -38,8 +38,8 @@
     
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <div style="border: 1px solid red;margin-top: 90px">
-        <h1 class="container-fluid" style="width: 900px; ">Tabela Price</h1>
+        <div style="margin-top: 130px; margin-bottom: 90px; height: 110%;">
+            <h1 class="container-fluid text-center" style="width: 900px; ">Tabela Price</h1><br><br>
         </hr>
         <form class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1); padding: 25px;border: 1px solid grey; border-radius: 5px;">
             
@@ -74,11 +74,16 @@
             </div>
         </form>
         <% if(request.getParameter("btnCalc")!= null){ %>
-        <div class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1);font-size: 16px; padding: 10px; margin-top:30px;margin-bottom: 10px;border: 1px solid grey; border-radius: 5px;"><% DecimalFormat dv = new DecimalFormat("#,##0.00");out.print("Valor da Prestação R$"+dv.format(gg.ResultPrestacao(pv, n, i)));%></div>
+        <div class="container-fluid" style="width: 800px; background-color: rgba(9,9,9,0.1);font-size: 16px; padding: 10px; margin-top:30px;margin-bottom: 10px;border: 1px solid grey; border-radius: 5px;"><% DecimalFormat dv = new DecimalFormat("#,##0.00");out.print("Valor da Prestação R$ "+ dv.format(gg.ResultPrestacao(pv, n, i)));%></div>
             
         <%out.print(gg.createTable(pv, n, i));
         }%>
         </div>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
+        <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="res/scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="res/scripts/bootstrap.min.js" type="text/javascript"></script>
     </body>
 </html>

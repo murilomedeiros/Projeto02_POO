@@ -22,5 +22,10 @@
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Hello World! AMERICAN</h1>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
+        <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="res/scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="res/scripts/bootstrap.min.js" type="text/javascript"></script>
     </body>
 </html>

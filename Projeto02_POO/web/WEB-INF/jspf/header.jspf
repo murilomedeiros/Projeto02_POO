@@ -37,23 +37,40 @@
 </nav>
 <script>
     $(document).ready(function () {
-        active();
+        addRemove();
+        active(window.location.pathname);
     });
 
-    function active() {
-        var teste = window.location.pathname;
-        if(teste == "/Projeto02_POO/home.jsp"){
+    function addRemove() {
+        var aux = window.location.pathname;
+        if (aux == "/Projeto02_POO/home.jsp") {
             document.getElementById("home").classList.add("active");
-        }else{
-             document.getElementById("about").classList.add("hide");
-             document.getElementById("team").classList.add("hide");
-             document.getElementById("drop").classList.add("hide");
-             document.getElementById("price").classList.remove("hide");
-             document.getElementById("amer").classList.remove("hide");
-             document.getElementById("cons").classList.remove("hide");
+        } else {
+            document.getElementById("about").classList.add("hide");
+            document.getElementById("team").classList.add("hide");
+            document.getElementById("drop").classList.add("hide");
+            document.getElementById("price").classList.remove("hide");
+            document.getElementById("amer").classList.remove("hide");
+            document.getElementById("cons").classList.remove("hide");
         }
     }
-
+    function active(url) {
+        if (url == "/Projeto02_POO/tabela-price.jsp") {
+            document.getElementById("price").classList.add("active");
+            document.getElementById("amer").classList.remove("active");
+            document.getElementById("cons").classList.remove("active");
+        }
+        if (url == "/Projeto02_POO/amortizacao-americana.jsp") {
+            document.getElementById("price").classList.remove("active");
+            document.getElementById("amer").classList.add("active");
+            document.getElementById("cons").classList.remove("active");
+        }
+        if (url == "/Projeto02_POO/amortizacao-constante.jsp") {
+            document.getElementById("price").classList.remove("active");
+            document.getElementById("amer").classList.remove("active");
+            document.getElementById("cons").classList.add("active");
+        }
+    }
     window.onscroll = function () {
         myFunction();
     };

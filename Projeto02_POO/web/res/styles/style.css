@@ -147,6 +147,7 @@ body{
 }
 .team-member {
     overflow: hidden;
+    box-shadow: 10px 10px 5px grey;
 }
 .team-member, .team-member .team-img {
     position: relative;
@@ -234,7 +235,16 @@ body{
     letter-spacing: 1px;
 }
 .bottom-line3{
-    width:100px;
+    width:300px;
+    height:2px;
+    margin:13px auto;
+    background-color:rgb(1, 78, 65);
+    opacity: 0.5;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
+}
+
+.bottom-line4{
+    width:120px;
     height:2px;
     margin:13px auto;
     background-color:rgb(1, 78, 65);
@@ -338,11 +348,27 @@ h3{
     color: #919496;
     font-size: 12px;
     text-transform: uppercase;
+    
+}
+.text-cover{
+    text-align: center;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 10%;
+    width: 100%;
+}
+.text-cover h1{
+    font-size: 80px;
+    font-weight: 600;
+}
+.text-cover h3{
+    font-size: 25px;
+    font-weight: 600;
 }
 
 
-
-
+/* ======================  Efeitos  ======================*/
 
 
 
