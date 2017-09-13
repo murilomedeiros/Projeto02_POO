@@ -40,6 +40,7 @@ public class Amortizacao {
         double jurosSoma = 0;
         double amortizacaoSoma = 0;
         double prestacaoSoma = 0;
+        
         String table = "<table class='table table-bordered container-fluid' style='width: 800px;'><tr>"
                 + "<th>Nº</th>"
                 + "<th>Prestação</th>"
