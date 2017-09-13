@@ -74,7 +74,7 @@
                     </div>
                 </form>
                 <% if (request.getParameter("btnCalc") != null) { %>
-                <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");
+                    <div class="container-fluid format_tabela"><% DecimalFormat dv = new DecimalFormat("#,##0.00");
                     out.print("Valor da Prestação Descrescente");%></div>
                     <%out.print(gg.createTable(pv, n, i, gg.CalcPrestConst(pv, n), "const"));
                     }%>
