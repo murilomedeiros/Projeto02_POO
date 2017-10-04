@@ -1,6 +1,5 @@
-Projeto2_POO
-
-Enunciado: Crie um projeto de aplicação WEB para cálculo de amortização com as seguintes páginas jsp:
+# Projeto2_POO
+Este projeto tem como objetivo criar uma aplicação WEB para o cálculo de amortização com as seguintes páginas jsp:
 
     -home.jsp, com informações sobre a equipe e o que faz essa aplicação;
   
